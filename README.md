@@ -1,68 +1,97 @@
-CyberSecure is an AI-powered network intrusion detection system designed for Security Operations Centers (SOCs). It analyzes network traffic patterns using machine learning to identify malicious activity, provides actionable security recommendations, and maintains a tamper-proof audit trail using blockchain technology.Problem StatementModern SOCs are overwhelmed with network traffic and need automated, intelligent systems to:
+🚀 IntrusiveX AI
 
-✅ Detect intrusions in real-time with high accuracy
-✅ Prioritize threats by severity level
-✅ Recommend immediate security actions
-✅ Maintain compliance-ready audit logs
-✅ Explain AI decisions to security analysts
-Our SolutionA complete end-to-end system featuring:
+AI-Powered Real-Time Intrusion Detection & Threat Intelligence System
 
-Zero False Negatives - 100% intrusion detection rate
-Intelligent Severity Scoring - LOW/MEDIUM/HIGH risk classification
-Actionable Recommendations - Specific steps for each threat
-Blockchain Logging - Immutable, tamper-proof audit trail
-Explainable AI - SHAP-based decision transparency
-⚡ Key Features🤖 Machine Learning
+🛡️ Overview
 
-XGBoost Classifier optimized for cybersecurity
-100% Recall - catches all intrusions (zero false negatives)
-96.8% Accuracy with 94.2% precision
-Custom threshold optimization (0.12) for security-first approach
-Fast inference - processes thousands of flows per second
-🔐 Security Intelligence
+IntrusiveX AI is an intelligent cybersecurity system designed to detect malicious network activity in real time using Machine Learning. The system identifies attacks, explains the reasoning using Explainable AI (SHAP), and stores detected threats securely for tamper-proof auditing.
 
-4-Level Severity Classification:
+It provides a modern visual dashboard to analyze anomalies, classify intrusion attempts, visualize threat metrics, and suggest preventive actions.
 
-🟢 Normal (benign traffic)
-🟡 Low Risk (suspicious activity)
-🟠 Medium Risk (likely intrusion)
-🔴 High Risk (confirmed attack)
+📌 Key Features
+
+🔍 Real-time Intrusion Detection using ML classification models
+
+🎯 Binary & Multi-Class Intrusion Result Labeling
+
+📊 Feature Importance & Confusion Matrix Visualization
+
+🧠 Explainable AI using SHAP for model transparency
+
+🔐 Secure Log Storage (Optional: Blockchain/Immutable Records)
+
+🧾 Threat Summary, Suggestions & Response Guidance
+
+⚡ Fast Web Interface with React Frontend and Python Backend
+
+🏗️ Tech Stack
+Layer	Technology
+Frontend	React.js, Axios, Chart.js/Recharts
+Backend	Python (Flask/FastAPI/Django), ML Model (Pickle/TensorFlow/Sklearn)
+ML Model	RandomForest / XGBoost / Gradient Boosting
+Explainability	SHAP
+Storage	SQLite / MongoDB / IPFS (Optional)
+📁 Project Structure
+IntrusiveX-AI/
+│
+├── backend/
+│   ├── model.pkl
+│   ├── api.py
+│   ├── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│
+└── README.md
+
+⚙️ Setup & Installation
+1️⃣ Clone the Repository
+git clone https://github.com/YourUser/IntrusiveX-AI.git
+cd IntrusiveX-AI
+
+2️⃣ Backend Setup
+cd backend
+pip install -r requirements.txt
+python api.py
 
 
+Backend will start at:
 
-Automated Action Recommendations:
+➡️ http://localhost:5000
 
-Immediate actions (block IP, quarantine, etc.)
-Monitoring recommendations
-Forensic investigation steps
-
-
-🔗 Blockchain Audit Trail
-
-SHA-256 cryptographic hashing
-Tamper-proof log integrity
-Chain validation - detect any modifications
-Compliance-ready - legal evidence quality
-JSON export for external analysis
-🧠 Explainable AI (XAI)
-
-SHAP values for feature importance
-Global explanations - which features matter most
-Local explanations - why specific samples were flagged
-Visual analytics:
-
-Beeswarm plots
-Waterfall plots
-Category importance
-Intrusion vs Normal comparison
+3️⃣ Frontend Setup
+cd frontend
+npm install
+npm start
 
 
-🎨 Modern Dashboard
+Frontend will start at:
 
-Real-time SOC-style interface
-Dark theme with neon accents (blue/cyan/purple)
-Interactive visualizations using Recharts
-Responsive design - works on desktop and mobile
-Drag & drop file upload
-Paginated threat logs
-Export capabilities (CSV, JSON, PDF)
+➡️ http://localhost:3000
+
+📡 How It Works (Workflow)
+
+User uploads network traffic dataset or CSV file
+
+Model processes data and detects:
+
+Normal traffic
+
+Multiple forms of intrusion (DOS, R2L, U2R, Probe, etc.)
+
+Results are sent to UI:
+
+Per-row detection results
+
+Confidence score
+
+Threat suggestion & remediation
+
+Visualizations (Confusion Matrix, Feature Importance) displayed on dashboard
+
+🧪 Sample Output
+Input Data Row	Prediction	Confidence	Suggestion
+Row #1	🔥 DOS Attack	97.2%	Block Source IP
+Row #2	✔ Normal	92.5%	No action required
